@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO SMOKE by mqrbxn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .text-accent {
+            color: #DC2626; /* Red-600 */
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #DC2626; 
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-text {
+            line-height: 0.9;
+        }
+
+        /* Smooth language transition */
+        .lang-content {
+            transition: opacity 0.3s ease;
+        }
+        .hidden-lang {
+            display: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-900">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter">
+                NO <span class="text-accent">SMOKE</span>.
+            </div>
+            <div class="flex gap-4 text-sm font-semibold">
+                <button onclick="setLang('id')" id="btn-id" class="text-white hover:text-accent transition-colors">ID</button>
+                <span class="text-gray-600">|</span>
+                <button onclick="setLang('en')" id="btn-en" class="text-gray-500 hover:text-accent transition-colors">EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative px-6">
+        <div class="text-center max-w-4xl fade-in section-anim">
+            <h1 class="text-5xl md:text-8xl font-black mb-6 hero-text">
+                are u <br> <span class="text-accent">smoking?</span>
+            </h1>
+            
+            <!-- ID Content -->
+            <div class="lang-content" data-lang="id">
+                <p class="text-xl md:text-2xl text-gray-400 font-light mb-8">
+                    lo tau persis apa yang lagi lo lakuin, <span class="text-white font-bold">chat.</span>
+                </p>
+                <a href="#reflex" class="inline-block border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold">
+                    Cari Tau Kenapa
+                </a>
+            </div>
+
+            <!-- EN Content -->
+            <div class="lang-content hidden-lang" data-lang="en">
+                <p class="text-xl md:text-2xl text-gray-400 font-light mb-8">
+                    u know exactly what are u doin, <span class="text-white font-bold">chat.</span>
+                </p>
+                <a href="#reflex" class="inline-block border border-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-300 rounded-full font-bold">
+                    Find Out Why
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-500"></i>
+        </div>
+    </section>
+
+    <!-- Section 1: Automaticity -->
+    <section id="reflex" class="min-h-screen flex items-center justify-center bg-gray-950 px-6 py-20 border-t border-gray-900">
+        <div class="max-w-3xl fade-in section-anim">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">
+                just a <span class="text-accent">reflex?</span>
+            </h2>
+            
+            <!-- ID Content -->
+            <div class="lang-content" data-lang="id">
+                <h3 class="text-2xl font-bold mb-4">Bukan Pilihan, Tapi Autopilot.</h3>
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    Lo mungkin mikir lo bakar rokok karena "lagi pengen". Tapi riset menunjukkan sebaliknya. Seringkali, tangan lo bergerak sendiri karena <strong>otomatisasi (automaticity)</strong>.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                    Otak lo udah diprogram ulang. Ketika ada pemicu (kopi, nunggu ojol, bengong), sistem motorik lo jalan duluan sebelum sadar lo setuju. Lo ngerokok bukan pakai niat, tapi pakai <span class="text-accent">refleks</span>.
+                </p>
+                <div class="p-4 border-l-4 border-accent bg-gray-900/50">
+                    <p class="italic text-sm text-gray-500">
+                        "Perokok seringkali merokok tanpa kesadaran kognitif penuh, didorong oleh impuls motorik otomatis." <br>
+                        — (Piper et al., 2004)
+                    </p>
+                </div>
+            </div>
+
+            <!-- EN Content -->
+            <div class="lang-content hidden-lang" data-lang="en">
+                <h3 class="text-2xl font-bold mb-4">Not a Choice, Just Autopilot.</h3>
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    You might think you light up because you "want to." Research suggests otherwise. Often, your hands move purely out of <strong>automaticity</strong>.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                    Your brain has been rewired. When a trigger hits (coffee, waiting, boredom), your motor system acts before your conscious mind agrees. You aren't smoking with intent; you're smoking on <span class="text-accent">reflex</span>.
+                </p>
+                <div class="p-4 border-l-4 border-accent bg-gray-900/50">
+                    <p class="italic text-sm text-gray-500">
+                        "Smokers often smoke without full cognitive awareness, driven by automatic motor impulses." <br>
+                        — (Piper et al., 2004)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Maladaptive Coping -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-20 border-t border-gray-900">
+        <div class="max-w-3xl fade-in section-anim text-right">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">
+                think it <span class="text-accent">calms</span> u?
+            </h2>
+            
+            <!-- ID Content -->
+            <div class="lang-content" data-lang="id">
+                <h3 class="text-2xl font-bold mb-4">Ilusi Ketenangan.</h3>
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    "Rokok nenangin gue pas stres." <br>
+                    Salah besar, chat. Itu bukan terapi, itu lingkaran setan (<span class="text-white italic">maladaptive loop</span>).
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                    Rokok sebenernya <strong>meningkatkan</strong> detak jantung dan level stres dasar lo. Rasa "tenang" yang lo rasain cuma efek hilangnya rasa sakau (withdrawal) sementara. Lo cuma ngisi lubang yang digali sama rokok itu sendiri.
+                </p>
+                <div class="p-4 border-r-4 border-accent bg-gray-900/50 text-right ml-auto">
+                    <p class="italic text-sm text-gray-500">
+                        "Efek relaksasi rokok hanyalah pemulihan dari gejala putus nikotin (withdrawal). Perokok memiliki tingkat stres dasar yang lebih tinggi." <br>
+                        — (Parrott, 1999; Wood et al., 2009)
+                    </p>
+                </div>
+            </div>
+
+            <!-- EN Content -->
+            <div class="lang-content hidden-lang" data-lang="en">
+                <h3 class="text-2xl font-bold mb-4">The Illusion of Calm.</h3>
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    "Smoking calms my nerves." <br>
+                    Wrong, chat. It's not therapy. It's a <span class="text-white italic">maladaptive loop</span>.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                    Cigarettes actually <strong>increase</strong> your heart rate and baseline stress levels. The "calm" you feel is just the temporary relief of nicotine withdrawal. You are just filling a hole that the cigarette itself dug.
+                </p>
+                <div class="p-4 border-r-4 border-accent bg-gray-900/50 text-right ml-auto">
+                    <p class="italic text-sm text-gray-500">
+                        "The relaxing effect of smoking is merely the reversal of nicotine withdrawal symptoms. Smokers maintain higher baseline stress levels." <br>
+                        — (Parrott, 1999; Wood et al., 2009)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Solution (Delay) -->
+    <section class="min-h-screen flex items-center justify-center bg-gray-950 px-6 py-20 border-t border-gray-900">
+        <div class="max-w-4xl fade-in section-anim text-center">
+            <h2 class="text-5xl md:text-7xl font-black mb-8">
+                take the <span class="text-accent">wheel</span> back.
+            </h2>
+            
+            <!-- ID Content -->
+            <div class="lang-content" data-lang="id">
+                <p class="text-xl md:text-3xl text-white font-bold leading-relaxed mb-6">
+                    Craving itu cuma memuncak selama <span class="text-accent">3-5 menit</span>.
+                </p>
+                <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+                    Lo gak perlu berhenti selamanya sekarang juga. Cukup <strong>TUNDA (DELAY)</strong>. Tunggu 5 menit. Alihkan perhatian. Lo yang kontrol dopaminnya, bukan batang rokok itu.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-left">
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800">
+                        <i class="fas fa-brain text-accent text-3xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Cognitive Regulation</h4>
+                        <p class="text-sm text-gray-500">Aktifkan Prefrontal Cortex lo untuk melawan impuls bawah sadar.</p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800">
+                        <i class="fas fa-clock text-accent text-3xl mb-4"></i>
+                        <h4 class="font-bold mb-2">The 5 Min Rule</h4>
+                        <p class="text-sm text-gray-500">Gelombang sugesti (urge surfing) akan turun sendiri setelah 5 menit.</p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800">
+                        <i class="fas fa-fist-raised text-accent text-3xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Regain Power</h4>
+                        <p class="text-sm text-gray-500">Setiap kali lo berhasil nunda, otak lo belajar siapa bosnya.</p>
+                    </div>
+                </div>
+
+                <p class="text-xs text-gray-600 mb-0">
+                    Ref: Cognitive regulation of craving (Kober et al., 2010)
+                </p>
+            </div>
+
+            <!-- EN Content -->
+            <div class="lang-content hidden-lang" data-lang="en">
+                <p class="text-xl md:text-3xl text-white font-bold leading-relaxed mb-6">
+                    The craving curve only spikes for <span class="text-accent">3-5 minutes</span>.
+                </p>
+                <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+                    You don't have to quit forever right now. Just <strong>DELAY</strong> it. Wait 5 minutes. Distract yourself. You control the dopamine, not the stick.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-left">
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800">
+                        <i class="fas fa-brain text-accent text-3xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Cognitive Regulation</h4>
+                        <p class="text-sm text-gray-500">Activate your Prefrontal Cortex to override subconscious impulses.</p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800">
+                        <i class="fas fa-clock text-accent text-3xl mb-4"></i>
+                        <h4 class="font-bold mb-2">The 5 Min Rule</h4>
+                        <p class="text-sm text-gray-500">The urge wave (urge surfing) will subside on its own after 5 mins.</p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg border border-gray-800">
+                        <i class="fas fa-fist-raised text-accent text-3xl mb-4"></i>
+                        <h4 class="font-bold mb-2">Regain Power</h4>
+                        <p class="text-sm text-gray-500">Every time you successfully delay, your brain learns who is boss.</p>
+                    </div>
+                </div>
+
+                <p class="text-xs text-gray-600 mb-0">
+                    Ref: Cognitive regulation of craving (Kober et al., 2010)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Help -->
+    <section class="py-20 px-6 border-t border-gray-900 bg-black">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl font-bold mb-8 text-white">
+                if u can't handle it alone
+            </h2>
+            
+            <div class="bg-gray-900 rounded-xl p-8 border border-gray-800 inline-block text-left w-full md:w-auto">
+                <div class="mb-6">
+                    <h4 class="text-accent font-bold mb-2 text-lg">Layanan Konseling Telepon (Bebas Pulsa)</h4>
+                    <p class="text-2xl font-mono text-white">0800-177-6565</p>
+                    <ul class="text-sm text-gray-400 mt-2 space-y-1">
+                        <li><i class="far fa-clock mr-2"></i>Senin-Jumat: 07.00 - 22.00 WIB</li>
+                        <li><i class="far fa-clock mr-2"></i>Sabtu: 07.00 - 21.00 WIB</li>
+                    </ul>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-6">
+                    <h4 class="text-white font-bold mb-4 text-lg">Layanan Chatbot (3rd Party)</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center hover:text-accent transition cursor-pointer">
+                            <i class="fab fa-whatsapp w-8 text-xl"></i> 
+                            <span>+62 821-2590-0597</span>
+                        </li>
+                        <li class="flex items-center hover:text-accent transition cursor-pointer">
+                            <i class="fab fa-facebook-messenger w-8 text-xl"></i> 
+                            <span>@penyakittidakmenular.id</span>
+                        </li>
+                        <li class="flex items-center hover:text-accent transition cursor-pointer">
+                            <i class="fab fa-telegram w-8 text-xl"></i> 
+                            <span>@Quitina_bot</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Footer -->
+    <footer class="bg-gray-950 border-t border-gray-900 py-12 px-6 text-xs text-gray-600">
+        <div class="container mx-auto max-w-4xl">
+            <h5 class="uppercase tracking-widest font-bold mb-4 text-gray-500">References</h5>
+            <div class="space-y-2 font-mono">
+                <p>Kober, H. et al. (2010). Prefrontal-subcortical brain circuit mediates cognitive regulation of craving. <em>Proceedings of the National Academy of Sciences</em>, 107(33), pp.14811–14816.</p>
+                <p>Parrott, A.C. (1999). Does cigarette smoking cause stress? <em>American Psychologist</em>, 54(10), pp.817–820.</p>
+                <p>Piper, M.E. et al. (2004). A multiple motives approach to tobacco dependence: the Wisconsin Inventory of Smoking Dependence Motives (WISDM-68). <em>Journal of Consulting and Clinical Psychology</em>, 72(2), pp.139–154.</p>
+                <p>Wood, A.P. and Griffiths, M.D. (2009). Smoking as a coping strategy in adolescents: a systematic review. <em>Journal of Public Health</em>, 17(2), pp.115-124.</p>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-900 flex justify-between">
+                <span>&copy; 2025 @mqrbxn</span>
+                <span>Medical Student Initiative.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Logic
+        function setLang(lang) {
+            const idContent = document.querySelectorAll('[data-lang="id"]');
+            const enContent = document.querySelectorAll('[data-lang="en"]');
+            const btnId = document.getElementById('btn-id');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'id') {
+                idContent.forEach(el => {
+                    el.classList.remove('hidden-lang');
+                    setTimeout(() => el.style.opacity = 1, 50);
+                });
+                enContent.forEach(el => {
+                    el.style.opacity = 0;
+                    setTimeout(() => el.classList.add('hidden-lang'), 300);
+                });
+                
+                btnId.classList.add('text-white');
+                btnId.classList.remove('text-gray-500');
+                btnEn.classList.add('text-gray-500');
+                btnEn.classList.remove('text-white');
+            } else {
+                enContent.forEach(el => {
+                    el.classList.remove('hidden-lang');
+                    setTimeout(() => el.style.opacity = 1, 50);
+                });
+                idContent.forEach(el => {
+                    el.style.opacity = 0;
+                    setTimeout(() => el.classList.add('hidden-lang'), 300);
+                });
+
+                btnEn.classList.add('text-white');
+                btnEn.classList.remove('text-gray-500');
+                btnId.classList.add('text-gray-500');
+                btnId.classList.remove('text-white');
+            }
+        }
+
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-anim').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Initialize default language
+        setLang('en');
+    </script>
+</body>
+</html>
